@@ -16,4 +16,24 @@ public class ExtendedCountingSort extends AbstractSorting<Integer> {
 		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
+	private int encontraMaior(Integer[] array, int left, int right){
+		int maior = array[left];
+		for(int i = left + 1; i <= right; i++){
+			if(array[i] > maior){
+				maior = array[i];
+			}
+		}
+		return maior;
+	}
+
+	private int encontraMenor(Integer[] array, int left, int right){
+		int menor = array[left];
+		for(int i = left + 1; i <= right; i++){
+			if(array[i] < menor){
+				menor = array[i];
+			}
+		}
+		return menor;
+	}
+
 }
